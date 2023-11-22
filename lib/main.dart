@@ -8,45 +8,45 @@ void main() {
           children: [
             // First Row with background color
             Container(
-              color: Color.fromARGB(255, 115, 245,
-                  143), // Specify the background color for the first row
+              color: Colors
+                  .green, // Specify the background color for the first row
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  buatKotak(Color.fromARGB(255, 231, 44, 44), 100),
-                  buatKotak(Color.fromARGB(255, 244, 60, 232)!, 100),
-                  buatKotak(Color.fromARGB(255, 243, 180, 33),
+                  buatKotak(Colors.red, 300, 100),
+                  buatKotak(Colors.purple[400]!, 300, 100),
+                  buatKotak(Colors.orangeAccent, 300,
                       100), // Blue background for the third column
-                  buatKotak(const Color.fromARGB(255, 255, 255, 255),
+                  buatKotak(Colors.white, 300,
                       100), // Purple background for the fourth column
                 ],
               ),
             ),
             Container(
               padding: EdgeInsets.all(10),
-              color: const Color.fromARGB(255, 243, 33, 191),
+              color: Colors.blue,
               child: Column(
                 children: [
                   Container(
-                    color: Colors.green,
+                    color: Colors.pink,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          buatKotak(Colors.black, 100),
-                          buatKotak(Colors.black, 100),
-                          buatKotak(Colors.black, 100),
-                          buatKotak(Colors.black, 100),
+                          buatKotak(Colors.pink, 100, 100),
+                          buatKotak(Colors.pink, 100, 100),
+                          buatKotak(Colors.pink, 100, 100),
+                          buatKotak(Colors.blue, 100, 100),
                         ]),
                   ),
                   Container(
-                    color: Colors.red,
+                    color: const Color.fromARGB(255, 123, 195, 253),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          buatKotak(Colors.black, 100),
-                          buatKotak(Colors.black, 100),
-                          buatKotak(Colors.black, 100),
-                          buatKotak(Colors.black, 100),
+                          buatKotak(Colors.blue, 100, 100),
+                          buatKotak(Colors.blue, 100, 100),
+                          buatKotak(Colors.blue, 100, 100),
+                          buatKotak(Colors.blue, 100, 100),
                         ]),
                   )
                 ],
@@ -60,11 +60,11 @@ void main() {
   ));
 }
 
-Widget buatKotak(Color warna, double ukuran) {
+Widget buatKotak(Color warna, double tinggi, double lebar) {
   return Container(
     decoration: BoxDecoration(color: warna),
-    height: ukuran,
-    width: ukuran,
+    height: tinggi,
+    width: lebar,
     margin: const EdgeInsets.all(10),
   );
 }
